@@ -2,9 +2,10 @@ package MonHoc;
 
 import Interface.InputTable;
 
+import java.io.Serializable;
 import java.util.Scanner;
 
-public class MonHoc implements InputTable {
+public class MonHoc implements InputTable,Comparable<MonHoc>, Serializable {
     public static int auto_maMonHoc = 100;
     private int maMonHoc;
     private String tenMon;
@@ -97,7 +98,21 @@ public class MonHoc implements InputTable {
 
     @Override
     public String toString() {
-        return super.toString();
+        return "MonHoc{" +
+                "maMonHoc=" + maMonHoc +
+                ", tenMon='" + tenMon + '\'' +
+                ", soHocTrinh=" + soHocTrinh +
+                ", loaiMon=" + loaiMon +
+                '}';
     }
 
+    @Override
+    public int compareTo(MonHoc monHoc) {
+        if (this.maMonHoc > monHoc.getMaMonHoc()){
+            return 1;
+        } else if (this.maMonHoc < monHoc.getMaMonHoc()){
+            return -1;
+        }
+        return 0;
+    }
 }

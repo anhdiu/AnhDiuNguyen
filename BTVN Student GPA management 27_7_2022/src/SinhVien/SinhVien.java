@@ -2,9 +2,10 @@ package SinhVien;
 
 import Interface.InputTable;
 
+import java.io.Serializable;
 import java.util.Scanner;
 
-public class SinhVien implements InputTable,Comparable<SinhVien> {
+public class SinhVien implements InputTable,Comparable<SinhVien>, Serializable {
     public static int auto_ID = 10000;
     private int maSinhVien;
     private String hoVaTen;

@@ -2,9 +2,10 @@ package MonHoc;
 
 import SinhVien.SinhVien;
 
+import java.io.Serializable;
 import java.util.Arrays;
 
-public class BangDiem {
+public class BangDiem implements Serializable {
     private SinhVien sinhVien;
     private chiTietBangDiem[] chiTietBangDiems;
     public BangDiem (){}
@@ -33,7 +34,7 @@ public class BangDiem {
     @Override
     public String toString() {
         return "BangDiem{" +
-                "sinhVien=" + sinhVien +
+                "sinhVien=" + sinhVien.getHoVaTen() +
                 ", chiTietBangDiems=" + Arrays.toString(chiTietBangDiems) +
                 '}';
     }

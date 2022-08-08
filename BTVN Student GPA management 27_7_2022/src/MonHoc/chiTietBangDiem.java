@@ -10,7 +10,7 @@ public class chiTietBangDiem {
         this.diemSo = diemSo;
     }
 
-    public MonHoc getMonHoc() {
+    public  MonHoc getMonHoc() {
         return monHoc;
     }
 

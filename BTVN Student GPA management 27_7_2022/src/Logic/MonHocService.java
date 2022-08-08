@@ -10,6 +10,7 @@ public class MonHocService {
         System.out.println("xin moi nhap so luong mon hoc muon them : ");
         int soLuongMonHoc = new Scanner(System.in).nextInt();
         for (int i = 0; i < soLuongMonHoc; i++) {
+            System.out.println("nhap mon hoc thu " + ( i + 1));
              MonHoc monHoc = new MonHoc();
              monHoc.inputInfor();
              luaMonHoc(monHoc);

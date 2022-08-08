@@ -17,7 +17,8 @@ public class SinhVienService {
     public static void them1SinhVien (){
         System.out.println("xin moi nhap so luong sinh vien muon them ");
         int soLuongSinhVien = new Scanner(System.in).nextInt();
-        for (int i = 0; i < Main.SINHVIEN.length; i++) {
+        for (int i = 0; i < soLuongSinhVien; i++) {
+            System.out.println("moi nhap thong tin sinh vien thu " + ( i + 1));
              SinhVien sinhVien = new SinhVien();
              sinhVien.inputInfor();
              luaThongTinSinhVien(sinhVien);
